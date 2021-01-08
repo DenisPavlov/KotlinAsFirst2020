@@ -127,7 +127,7 @@ fun accountInThreeYears(initial: Int, percent: Int): Double {
 
     var sum = initial.toDouble()
     for (year in 0..2) {
-        sum += accountInYear(sum, percent)
+        sum += sum * percent / 100.0
     }
     return sum
 }
